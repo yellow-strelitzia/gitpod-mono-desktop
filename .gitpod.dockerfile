@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full-vnc:18.04
+FROM gitpod/workspace-full-vnc:bionic
 
 USER root
 
