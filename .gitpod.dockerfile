@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full-vnc:latest
+FROM gitpod/workspace-full-vnc:18.04
 
 USER root
 
@@ -16,7 +16,7 @@ RUN apt-get update \
   && apt-key list | grep Xamarin \
   && apt-get purge -y --auto-remove gnupg dirmngr
 
-RUN echo "deb http://download.mono-project.com/repo/ubuntu stable-disco/snapshots/$MONO_VERSION main" > /etc/apt/sources.list.d/mono-official-stable.list \
+RUN echo "deb http://download.mono-project.com/repo/ubuntu stable-bionic/snapshots/$MONO_VERSION main" > /etc/apt/sources.list.d/mono-official-stable.list \
   && apt-get update \
   && apt-get install -y mono-devel \
   && rm -rf /var/lib/apt/lists/* /tmp/*
