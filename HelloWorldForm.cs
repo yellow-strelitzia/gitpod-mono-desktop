@@ -6,7 +6,7 @@ public class HelloWorldForm : Form
 {
     static public void Main ()
     {
-        Application.Run (new HelloWorld ());
+        Application.Run (new HelloWorldForm ());
     }
  
     public HelloWorldForm ()
